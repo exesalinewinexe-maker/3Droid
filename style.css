@@ -1,0 +1,59 @@
+/* ===== Global ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* ===== Header ===== */
+header {
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* ===== Download Button ===== */
+.download {
+    margin: 40px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #00aaff;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 22px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #0088cc;
+}
+
+/* ===== Features ===== */
+.features {
+    margin: 50px 20px;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin
