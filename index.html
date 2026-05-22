@@ -16,6 +16,50 @@
 
   <!-- Basic SEO -->
   <meta name="description" content="3Droid is an Android emulator for Android.">
+
+  <!-- Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    .playstore-btn {
+      display: inline-block;
+      text-decoration: none;
+    }
+    .playstore-img {
+      width: 220px;
+      height: auto;
+      border-radius: 8px;
+      background: #fff;
+      padding: 6px;
+    }
+    .playstore-img:hover {
+      opacity: 0.85;
+    }
+    footer {
+      padding: 20px;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -30,6 +74,17 @@
         This is the web entry point for the 3Droid PWA.
         You can install it to your home screen and launch it like a normal app.
       </p>
+    </section>
+
+    <!-- ⭐ APK DOWNLOAD BUTTON ⭐ -->
+    <section>
+      <h2>Download 3Droid APK</h2>
+      <p>Install the native Android version of 3Droid.</p>
+
+      <a href="/downloads/3droid.apk" download class="playstore-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+             alt="Download 3Droid APK" class="playstore-img">
+      </a>
     </section>
 
     <section>
@@ -51,7 +106,7 @@
     <p>© 2026 3Droid. All rights reserved.</p>
   </footer>
 
-  <!-- Optional: simple PWA check -->
+  <!-- PWA check + service worker -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js').then(function () {
