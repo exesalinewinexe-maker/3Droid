@@ -1,0 +1,10 @@
+# File 24 — .cool format
+version=1.0
+author=I
+description=Custom chaos-powered file for 3Droid
+coolness_level=∞
+data_block {
+    id: 24
+    status: active
+    mode: hypercool
+}
