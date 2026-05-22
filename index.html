@@ -1,135 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3Droid</title>
 
-    <title>3Droid – Android App & Web App</title>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
 
-    <!-- Correct manifest path for GitHub Pages project site -->
-    <link rel="manifest" href="/3Droid/manifest.json">
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1a1a1a">
 
-    <!-- Theme colors for PWA -->
-    <meta name="theme-color" content="#0a84ff">
-    <meta name="background-color" content="#ffffff">
+  <!-- Styles -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0d0d0d;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
 
-    <!-- Icons -->
-    <link rel="icon" href="/3Droid/icons/3droid-192.png">
-    <link rel="apple-touch-icon" href="/3Droid/icons/3droid-192.png">
+    header {
+      padding: 40px 20px;
+    }
 
-    <!-- Styles -->
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-            text-align: center;
-        }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-        header {
-            background: #0a84ff;
-            color: white;
-            padding: 25px 10px;
-            font-size: 28px;
-            font-weight: bold;
-        }
+    p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
 
-        .container {
-            padding: 20px;
-        }
+    .download-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: #00aaff;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
 
-        .download-btn {
-            display: inline-block;
-            background: #0a84ff;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            font-size: 20px;
-            text-decoration: none;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+    .download-btn:hover {
+      background: #0088cc;
+    }
 
-        .download-btn:hover {
-            background: #006fe0;
-        }
+    .fallback {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
 
-        .section {
-            background: white;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 700px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
+    .fallback a {
+      color: #00aaff;
+    }
+  </style>
 
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #0a84ff;
-            color: white;
-        }
-
-        #pwa-status {
-            font-weight: bold;
-            color: #0a84ff;
-        }
-    </style>
+  <!-- Auto-download Script -->
+  <script>
+    window.onload = function() {
+      setTimeout(() => {
+        window.location.href = "downloads/3droid.apk";
+      }, 800);
+    };
+  </script>
 </head>
 
 <body>
+  <header>
+    <h1>3Droid</h1>
+    <p>Your lightweight Android tool — fast, clean, and simple.</p>
 
-<header>3Droid – Android App & Web App</header>
+    <!-- Main Download Button -->
+    <a href="downloads/3droid.apk" class="download-btn">Download APK</a>
 
-<div class="container">
-
-    <!-- APK DOWNLOAD SECTION -->
-    <div class="section">
-        <h2>Download 3Droid APK</h2>
-        <p>Works on ALL browsers: Chrome, Edge, Firefox, Samsung Internet, Opera, Safari, Vivo Browser, iQOO Browser, and more.</p>
-
-        <!-- UNIVERSAL APK DOWNLOAD BUTTON -->
-        <a class="download-btn"
-           href="/3Droid/downloads/3droid.apk"
-           download="3droid.apk"
-           type="application/vnd.android.package-archive">
-            Download APK
-        </a>
+    <!-- Fallback Link -->
+    <div class="fallback">
+      If your file doesn't start, 
+      <a href="downloads/fallback.html">Click Here</a>
     </div>
+  </header>
 
-    <!-- PWA INSTALL SECTION -->
-    <div class="section">
-        <h2>Install 3Droid as a PWA</h2>
-        <p id="pwa-status">Checking PWA status…</p>
-    </div>
-
-</div>
-
-<footer>
-    © 2026 3Droid Project
-</footer>
-
-<!-- Service Worker Registration -->
-<script>
+  <!-- Register Service Worker -->
+  <script>
     if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/3Droid/service-worker.js")
-            .then(() => console.log("Service Worker registered"))
-            .catch(err => console.error("SW error:", err));
+      navigator.serviceWorker.register("service-worker.js");
     }
-
-    // PWA Installability Check
-    window.addEventListener("load", () => {
-        if (window.matchMedia("(display-mode: standalone)").matches) {
-            document.getElementById("pwa-status").textContent =
-                "3Droid is installed as a PWA.";
-        } else {
-            document.getElementById("pwa-status").textContent =
-                "You can install 3Droid from your browser menu.";
-        }
-    });
-</script>
-
+  </script>
 </body>
 </html>
