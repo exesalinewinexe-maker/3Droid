@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<file27
+    id="27"
+    type="config"
+    author="I"
+    description="XML configuration file for 3Droid engine">
+
+    <settings>
+        <mode value="xml" />
+        <status value="enabled" />
+        <sequence value="27" />
+    </settings>
+
+</file27>
