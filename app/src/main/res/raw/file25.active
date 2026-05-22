@@ -1,0 +1,12 @@
+# File 25 — .active format
+id=25
+state=active
+author=I
+description=Active-state data file for 3Droid engine
+
+activity_block {
+    mode: "live"
+    priority: "high"
+    sequence: 25
+    timestamp: 2026-05-21T19:03
+}
