@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataFile23>
+    <meta>
+        <createdBy>I</createdBy>
+        <version>1.0</version>
+        <description>Data storage for 3Droid project</description>
+    </meta>
+
+    <settings>
+        <option name="feature_enabled">true</option>
+        <option name="max_speed">120</option>
+        <option name="debug_mode">false</option>
+    </settings>
+
+    <userdata>
+        <player id="1">
+            <name>DefaultUser</name>
+            <level>1</level>
+            <xp>0</xp>
+        </player>
+    </userdata>
+</dataFile23>
