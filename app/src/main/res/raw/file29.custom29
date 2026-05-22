@@ -1,0 +1,13 @@
+# File 29 — RAW CUSTOM FORMAT
+id=29
+type=custom
+author=I
+description=3Droid icon integration metadata
+
+custom_block {
+    mode: "raw_custom"
+    sequence: 29
+    icon_files: ["3droid-192.png", "3droid-512.png"]
+    manifest_status: "icons_added"
+    signature: "3DroidRaw29"
+}
