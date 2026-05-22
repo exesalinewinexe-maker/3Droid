@@ -1,39 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3Droid – Android Emulator for Android</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>3Droid</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="/manifest.json?v=2">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Icons -->
+  <link rel="icon" href="/icons/3droid-192.png">
+  <link rel="apple-touch-icon" href="/icons/3droid-512.png">
+
+  <!-- Basic SEO -->
+  <meta name="description" content="3Droid is an Android emulator for Android.">
 </head>
-
 <body>
+  <header>
+    <h1>3Droid</h1>
+    <p>An experimental Android emulator for Android.</p>
+  </header>
 
-    <header>
-        <img src="images/3droid_logo.png" class="logo" alt="3Droid Logo">
-        <h1>3Droid</h1>
-        <p>The Android Emulator… for Android.</p>
-    </header>
-
-    <section class="download">
-        <h2>Download</h2>
-        <a class="btn" href="3droid.apk">Download 3Droid APK</a>
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>
+        This is the web entry point for the 3Droid PWA.
+        You can install it to your home screen and launch it like a normal app.
+      </p>
     </section>
 
-    <section class="features">
-        <h2>Features</h2>
-        <ul>
-            <li>Run Android apps inside Android</li>
-            <li>Fast, lightweight virtual device</li>
-            <li>Customizable emulator settings</li>
-            <li>Open‑source and community‑driven</li>
-        </ul>
+    <section>
+      <h2>How to install</h2>
+      <ol>
+        <li>Open this site in Chrome or Edge on Android.</li>
+        <li>Tap the menu (⋮) and choose “Install app” or “Add to Home screen”.</li>
+        <li>Launch 3Droid from your home screen.</li>
+      </ol>
     </section>
 
-    <footer>
-        <p>© 2026 3Droid Project</p>
-    </footer>
+    <section>
+      <h2>Status</h2>
+      <p id="pwa-status">Checking PWA support…</p>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <footer>
+    <p>© 2026 3Droid. All rights reserved.</p>
+  </footer>
+
+  <!-- Optional: simple PWA check -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(function () {
+        console.log('Service worker registered');
+      }).catch(function (err) {
+        console.warn('Service worker registration failed:', err);
+      });
+      document.getElementById('pwa-status').textContent =
+        'PWA features available. You can install 3Droid.';
+    } else {
+      document.getElementById('pwa-status').textContent =
+        'Your browser does not fully support PWA features.';
+    }
+  </script>
 </body>
 </html>
