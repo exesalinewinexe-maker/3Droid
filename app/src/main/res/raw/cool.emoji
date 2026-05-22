@@ -1,0 +1,12 @@
+# File 26 — .emoji format
+id=26
+type=emoji
+author=I
+description=Custom emoji data file for 3Droid engine
+
+emoji_block {
+    name: "cool"
+    mood: "hypercool"
+    power_level: 9000
+    sequence: 26
+}
