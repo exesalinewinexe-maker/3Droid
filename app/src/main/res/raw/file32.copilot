@@ -1,0 +1,7 @@
+# File 32 — Copilot Format
+id=32
+type=copilot_resource
+owner=3Droid
+status=active
+payload=FILE_32_COPILOT_INITIALIZED
+note=This file uses the .copilot extension as requested
