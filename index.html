@@ -1,98 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3Droid</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3Droid Emulator – Downloads</title>
 
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            background: #0d0d0d;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-  <!-- Theme Color -->
-  <meta name="theme-color" content="#1a1a1a">
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
 
-  <!-- Styles -->
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #0d0d0d;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+        h2 {
+            font-size: 22px;
+            margin-top: -10px;
+            color: #bbbbbb;
+        }
 
-    header {
-      padding: 40px 20px;
-    }
+        .btn {
+            display: block;
+            width: 260px;
+            margin: 14px auto;
+            padding: 16px 20px;
+            background: #007aff;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
+        .apk {
+            background: #28a745;
+        }
 
-    p {
-      font-size: 1.1rem;
-      opacity: 0.8;
-    }
+        .ksign {
+            background: #ff9500;
+        }
 
-    .download-btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: #00aaff;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border-radius: 10px;
-      transition: 0.2s;
-    }
-
-    .download-btn:hover {
-      background: #0088cc;
-    }
-
-    .fallback {
-      margin-top: 15px;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-
-    .fallback a {
-      color: #00aaff;
-    }
-  </style>
-
-  <!-- Auto-download Script -->
-  <script>
-    window.onload = function() {
-      setTimeout(() => {
-        window.location.href = "downloads/3droid.apk";
-      }, 800);
-    };
-  </script>
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <h1>3Droid</h1>
-    <p>Your lightweight Android tool — fast, clean, and simple.</p>
 
-    <!-- Main Download Button -->
-    <a href="downloads/3droid.apk" class="download-btn">Download APK</a>
+    <h1>3Droid Emulator</h1>
+    <h2>Universal Download Page</h2>
 
-    <!-- Fallback Link -->
-    <div class="fallback">
-      If your file doesn't start, 
-      <a href="downloads/fallback.html">Click Here</a>
+    <br>
+
+    <!-- APK DOWNLOAD -->
+    <a href="3droid.apk" class="btn apk">Download APK (Android)</a>
+
+    <!-- IPA DOWNLOAD -->
+    <a href="3droid.ipa" class="btn">Download IPA (iPhone & iPad)</a>
+
+    <!-- KSign INSTALL -->
+    <a href="ksign://install?url=https://YOUR-USERNAME.github.io/3droid.ipa" 
+       class="btn ksign">Install with KSign (iOS)</a>
+
+    <div class="footer">
+        3Droid © 2026 — Universal Emulator Project
     </div>
-  </header>
 
-  <!-- Register Service Worker -->
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js");
-    }
-  </script>
 </body>
 </html>
