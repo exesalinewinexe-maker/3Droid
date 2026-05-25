@@ -1,0 +1,7 @@
+# File 35 — .cool Format
+id=35
+type=cool_resource
+temperature=absolute_zero_drip
+status=active
+payload=FILE_35_COOL_INITIALIZED
+note=This file is cooler than File 34 and it knows it
